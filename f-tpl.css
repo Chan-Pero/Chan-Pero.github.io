@@ -1,0 +1,511 @@
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;  
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+/*　設定 */
+
+body {
+    font: 14px/1.9 'Noto Sans JP', Arial, Verdana, 游ゴシック, YuGothic,'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', メイリオ, Meiryo,sans-serif;
+    font-weight: 300;
+    -webkit-text-size-adjust: 100%;
+    overflow-x: hidden;
+    color: #fff;
+    background: #000;
+    display: block;
+    margin: 0px;
+    padding: 0px;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}    
+
+/* ヘッダー */
+
+.header-top {
+    height: 60px;
+    width: 100%;
+    background-color: black;
+    position: fixed;
+    margin: 0px;
+    z-index: 5;
+}
+
+.header-top img {
+    display: block;
+    margin: 20px auto;
+    margin-bottom: 0px;
+    width: 100px;
+}
+
+.header-top i {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 20px;
+}
+
+.fa-xmark {
+    visibility: hidden;
+}
+
+.header-nav {
+    position: absolute;
+    top: 46px;
+    left: 0px;
+    width: 100%;
+}
+
+.header-nav li {
+    display: block;
+    height: 58px;
+    width: 100%;
+    background-color: black;
+    border-bottom: 1px solid #FFFFFF;
+    list-style: none;
+}
+
+.header-nav li a {
+    display: block;
+    line-height: 58px;
+    width: 100%;
+    font-size: 15px;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-family: 'Modern Antiqua', 'Noto Sans JP',serif;
+}
+
+.header-nav li a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.fa-angle-right {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.header-sns {
+    height: 45px;
+    width: 100%;
+    border-bottom: 1px solid #FFFFFF;
+    background-color: black;
+}
+
+.header-sns li {
+    float: left;
+    width: 40px;
+    height: 45px;
+}
+
+.header-sns ul li a {
+    line-height: normal;
+    margin: 15px 14px 10px 10px;
+}
+
+.header-sns .fa-brands {
+    text-align: left;
+    font-size: 20px;
+}
+
+.header-nav {
+    transform: translateY(-120%);
+    transition: all 0.8s;
+    position: fixed;
+}
+
+.drawer-btn {
+    width: 100%;
+    height: 60px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    margin: 0px;
+    padding: 0px;
+    z-index: 10;
+    position: fixed;
+    opacity: 0;
+}
+
+.drawer-btn:checked ~ .header-nav {
+    transform: translateY(3.5%);
+}
+
+.drawer-btn:checked ~ .header-top .fa-bars {
+    visibility: hidden;
+}
+
+.drawer-btn:checked ~ .header-top .fa-xmark {
+    visibility: visible;
+}
+
+/* サイドバー */
+
+.side-bar {
+    width: 12%;
+    position: fixed;
+    top: 0;
+    right: 4%;
+}
+
+.side-logo {
+    height: 92px;
+}
+
+.side-logo .logo {
+    width: 87px;
+    margin-top: 30px;
+}
+
+.side-menu {
+    height: 382px;
+}
+
+.side-menu li {
+    display: block;
+    height: 47px;
+    list-style: none;
+    color: #FFFFFF;
+    font-family: 'Modern Antiqua', 'Noto Sans JP',serif;
+    text-decoration: none;
+}
+
+.side-menu li a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.side-menu li a:hover {
+    text-decoration: underline;
+}
+
+.side-sns {
+    height: 49px;
+    margin-top: 50px;
+}
+
+.side-sns li {
+    float: left;
+    font-size: 20px;
+    margin-right: 14px;
+}
+
+.side-sns li:hover {
+    opacity: 0.7;
+}
+
+/* コンテンツ　*/
+
+.contents-wrapper {
+    width: 80%;
+}
+
+/* トプ写真 */
+
+.main-img {
+    width: 100%;
+}
+
+.message-wrapper {
+    height: 325px;
+    width: 100%;
+}
+
+.message-wrapper h1 {
+    display: block;
+    font-family: 'Modern Antiqua', 'Noto Sans JP',serif;
+    font-size: 22px;
+    margin: 70px auto;
+    width: 110px;
+    height: 48px;
+    border-bottom: 2px solid #FFFFFF;
+}
+
+.message-wrapper p {
+    display: block;
+    width: 60%;
+    margin: 0 auto;
+    padding-bottom: 20%;
+}
+
+.clear {
+    clear: left;
+}
+
+/* 写真 */
+
+.gallery {
+    overflow: hidden;
+}
+
+img {
+    vertical-align: bottom;
+}
+
+.gallery li {
+    list-style: none;
+}
+
+.gallery img {
+    display: block;
+    width: 33.33333333%;
+    float: left;
+    height: auto;
+}
+
+.full-img {
+    clear: left;
+    width: 100%;
+    height: auto;
+}
+
+.full {
+    width: 100%;
+    height: auto;
+}
+
+/* ブランド */
+
+.brand-wrapper {
+    width: 100%;
+    height: auto;
+}
+
+.brand-wrapper h1 {
+    display: block;
+    font-family: 'Modern Antiqua', 'Noto Sans JP',serif;
+    font-size: 22px;
+    margin: 78px auto;
+    width: 82px;
+    height: 48px;
+    border-bottom: 2px solid #FFFFFF;
+}
+
+.brand-contents {
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #FFFFFF;
+    overflow: hidden;
+    height: auto;
+}
+
+.brand-contents li {
+    width: 18%;
+    padding: 0px 3%;
+    list-style: none;
+    float: left;
+}
+
+.brand-contents img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* プロジェクト */
+
+.project-wrapper {
+    width: 100%;
+    height: auto;
+}
+
+.project-wrapper h1 {
+    display: block;
+    font-family: 'Modern Antiqua', 'Noto Sans JP',serif;
+    font-size: 22px;
+    margin: 70px auto;
+    width: 105px;
+    height: 48px;
+    border-bottom: 2px solid #FFFFFF;
+}
+
+.project-contents {
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #FFFFFF;
+    height: auto;
+}
+
+.project {
+    height: auto;
+    padding-bottom: 50px;
+}
+
+.project img {
+    width: 370px;
+    margin: 5px 20px 20px 20px;
+    float: left;
+}
+
+.project p {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* カンパニー */
+
+.company-wrapper {
+    width: 100%;
+    height: auto;
+}
+
+.company-wrapper h1 {
+    display: block;
+    font-family: 'Modern Antiqua', 'Noto Sans JP',serif;
+    font-size: 22px;
+    margin: 70px auto;
+    width: 109px;
+    height: 48px;
+    border-bottom: 2px solid #FFFFFF;
+}
+
+.location-wrapper {
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.location-wrapper ul {
+    display: block;
+    float: left;
+    width: 38%;
+    padding-right: 2%;
+    padding-bottom: 50px;
+}
+
+.location-wrapper li {
+    padding-bottom: 3px;
+}
+
+.location-wrapper iframe {
+    float: left;
+    width: 60%;
+    height: 100%;
+    margin-bottom: 150px;
+}
+
+/* フッター */
+
+footer {
+    margin: 0px auto;
+}
+
+footer p {
+    font-size: 12px;
+    padding: 50px 10px 50px 0px;
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: #0066FF;
+}
+
+footer a:hover {
+    text-decoration:underline;
+}
+
